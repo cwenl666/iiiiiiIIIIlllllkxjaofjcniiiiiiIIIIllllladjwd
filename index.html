@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全访问入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333333;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #07c160;
+        }
+        
+        p {
+            color: #666666;
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: #07c160;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        
+        .btn:hover {
+            background: #06ae56;
+        }
+        
+        .compliance {
+            font-size: 12px;
+            color: #999999;
+            margin-top: 30px;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 22px;
+            }
+            
+            p {
+                font-size: 15px;
+            }
+            
+            .btn {
+                padding: 12px 30px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>安全访问提示</h2>
+    <p>根据相关要求，访问外部链接需进行安全验证</p>
+    <p>请点击下方按钮继续访问</p>
+    
+    <button class="btn" id="safeBtn">安全继续访问</button>
+    
+    <p class="compliance">
+        本页面符合《微信外部链接内容管理规范》
+    </p>
+    <script>
+        document.getElementById('safeBtn').addEventListener('click', function() {
+           
+            setTimeout(function() {
+               
+                window.open('https://weixin.qq.com/cgi-bin/readtemplate?t=weixin_external_links_content_management_specification', '_blank');
+            }, 300);
+        });
+    </script>
+   <script src="sticker.js"></script>
+</body>
+</html>
